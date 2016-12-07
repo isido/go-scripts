@@ -66,7 +66,7 @@ func main() {
 		item := string(item_b)
 
 		if _, err := os.Stat(bitstream); err == nil {
-			fmt.Fprintf(os.Stdout, "add-file \"%v\" %v\n", bitstream, item)
+			fmt.Fprintf(os.Stdout, "add-file -r \"%v\" %v\n", bitstream, item)
 			found_bitstreams = found_bitstreams + 1
 		} else {
 			fmt.Fprintf(os.Stderr, "Cannot find bitstream '%v'\n", bitstream)
